@@ -91,6 +91,7 @@
             filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
             border-radius: 15px;
             object-fit: contain;
+            background: transparent;
         }
        
         .lock-stickers img:nth-child(2) { animation-delay: 0.5s; }
@@ -227,7 +228,6 @@
             margin: 30px 0;
             justify-items: center;
             align-items: center;
-            position: relative;
         }
        
         .sticker-img {
@@ -400,6 +400,7 @@
             animation: wiggle 3s ease-in-out infinite;
             border-radius: 15px;
             object-fit: contain;
+            background: transparent;
         }
        
         .page-stickers .sticker-img:nth-child(2) { animation-delay: 0.5s; }
@@ -479,6 +480,7 @@
             animation: groupFloat 3s ease-in-out infinite;
             border-radius: 15px;
             object-fit: contain;
+            background: transparent;
         }
        
         .back-cover-stickers .sticker-img:nth-child(2) { animation-delay: 0.3s; }
@@ -565,44 +567,17 @@
         }
         /* Responsive */
         @media (max-width: 768px) {
-            .diary-container {
-                padding: 15px;
-            }
-           
-            .photo-frame {
-                padding: 12px;
-            }
-           
-            .photo-placeholder {
-                height: 280px;
-            }
-           
-            .navigation {
-                justify-content: center;
-            }
-           
-            .cover-stickers {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .diary-container { padding: 15px; }
+            .photo-frame { padding: 12px; }
+            .photo-placeholder { height: 280px; }
+            .navigation { justify-content: center; }
+            .cover-stickers { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 480px) {
-            .photo-placeholder {
-                height: 220px;
-            }
-           
-            .riddle-box {
-                padding: 20px;
-            }
-           
-            .music-control {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-            }
-           
-            .cover-stickers {
-                grid-template-columns: 1fr;
-            }
+            .photo-placeholder { height: 220px; }
+            .riddle-box { padding: 20px; }
+            .music-control { width: 50px; height: 50px; font-size: 1.5rem; }
+            .cover-stickers { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -611,16 +586,16 @@
     <div class="cursor"></div>
     <!-- Music Control -->
     <button class="music-control" onclick="toggleMusic()" title="Toggle Music">Music</button>
+
     <!-- Lock Screen -->
     <div class="diary-container" id="lockScreen">
         <div class="lock-screen">
             <h1>Our Frozen Story</h1>
            
             <div class="lock-stickers">
-                <!-- High-quality, transparent PNGs from reliable source -->
-                <img src="https://www.seekpng.com/png/full/192-1922810_elsa-frozen-png.png" alt="Elsa" onerror="this.src='https://via.placeholder.com/120?text=Elsa'">
-                <img src="https://www.seekpng.com/png/full/192-1922809_anna-frozen-png.png" alt="Anna" onerror="this.src='https://via.placeholder.com/120?text=Anna'">
-                <img src="https://www.seekpng.com/png/full/192-1922812_olaf-frozen-png.png" alt="Olaf" onerror="this.src='https://via.placeholder.com/120?text=Olaf'">
+                <img src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="Elsa">
+                <img src="https://i.ibb.co/3d9rK7F/anna.png" alt="Anna">
+                <img src="https://i.ibb.co/0jR3X5W/olaf.png" alt="Olaf">
             </div>
            
             <div class="riddle-box">
@@ -631,6 +606,7 @@
             </div>
         </div>
     </div>
+
     <!-- Cover Page -->
     <div class="diary-container hidden" id="coverPage">
         <div class="cover-page">
@@ -640,10 +616,10 @@
             <div class="subtitle">Ultimate Sticker Book</div>
            
             <div class="cover-stickers">
-                <img class="sticker-img" src="https://www.seekpng.com/png/full/192-1922814_sven-frozen-png.png" alt="Sven" onerror="this.src='https://via.placeholder.com/140?text=Sven'">
-                <img class="sticker-img" src="https://www.seekpng.com/png/full/192-1922809_anna-frozen-png.png" alt="Anna" onerror="this.src='https://via.placeholder.com/140?text=Anna'">
-                <img class="sticker-img" src="https://www.seekpng.com/png/full/192-1922812_olaf-frozen-png.png" alt="Olaf" onerror="this.src='https://via.placeholder.com/140?text=Olaf'">
-                <img class="sticker-img" src="https://www.seekpng.com/png/full/192-1922811_kristoff-frozen-png.png" alt="Kristoff" onerror="this.src='https://via.placeholder.com/140?text=Kristoff'">
+                <img class="sticker-img" src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="Elsa">
+                <img class="sticker-img" src="https://i.ibb.co/3d9rK7F/anna.png" alt="Anna">
+                <img class="sticker-img" src="https://i.ibb.co/0jR3X5W/olaf.png" alt="Olaf">
+                <img class="sticker-img" src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="Kristoff">
             </div>
            
             <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); color: #4facfe; margin: 25px 0; font-weight: 600; line-height: 1.7;">
@@ -653,21 +629,22 @@
             <div class="sticker-count">More than 60 fabulous full colour stickers</div>
            
             <div class="decorative-elements">
-                <img src="https://cdn-icons-png.flaticon.com/512/2590/2590196.png" alt="snowflake">
-                <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="heart">
-                <img src="https://cdn-icons-png.flaticon.com/512/2590/2590196.png" alt="snowflake">
+                <img src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="snowflake">
+                <img src="https://i.ibb.co/3d9rK7F/anna.png" alt="heart">
+                <img src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="snowflake">
             </div>
            
             <button class="enter-btn" onclick="enterDiary()">Enter Our Story</button>
         </div>
     </div>
+
     <!-- Diary Pages -->
     <div class="diary-container hidden" id="diaryPages">
         <div class="diary-page">
-            <img class="corner-sticker top-left" src="https://cdn-icons-png.flaticon.com/512/2590/2590196.png" alt="snowflake">
-            <img class="corner-sticker top-right" src="https://cdn-icons-png.flaticon.com/512/2590/2590196.png" alt="snowflake">
-            <img class="corner-sticker bottom-left" src="https://cdn-icons-png.flaticon.com/512/2590/2590196.png" alt="snowflake">
-            <img class="corner-sticker bottom-right" src="https://cdn-icons-png.flaticon.com/512/2590/2590196.png" alt="snowflake">
+            <img class="corner-sticker top-left" src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="snowflake">
+            <img class="corner-sticker top-right" src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="snowflake">
+            <img class="corner-sticker bottom-left" src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="snowflake">
+            <img class="corner-sticker bottom-right" src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="snowflake">
            
             <div class="page-header">
                 <h2 class="page-title" id="pageTitle">Our First Memory</h2>
@@ -681,13 +658,13 @@
             </div>
            
             <div class="page-stickers" id="pageStickers">
-                <img class="sticker-img" src="https://www.seekpng.com/png/full/192-1922810_elsa-frozen-png.png" alt="Elsa" onerror="this.src='https://via.placeholder.com/100?text=Elsa'">
-                <img class="sticker-img" src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="heart">
-                <img class="sticker-img" src="https://www.seekpng.com/png/full/192-1922812_olaf-frozen-png.png" alt="Olaf" onerror="this.src='https://via.placeholder.com/100?text=Olaf'">
+                <img class="sticker-img" src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="Elsa">
+                <img class="sticker-img" src="https://i.ibb.co/3d9rK7F/anna.png" alt="heart">
+                <img class="sticker-img" src="https://i.ibb.co/0jR3X5W/olaf.png" alt="Olaf">
             </div>
            
             <div class="story-text" id="storyText">
-                Write your beautiful memory here... Tell her how special that moment was, how it made you feel, and why you'll treasure it forever.
+                Write your beautiful memory here...
             </div>
            
             <div class="page-counter" id="pageCounter">Page 1 of 5</div>
@@ -698,17 +675,18 @@
             </div>
         </div>
     </div>
+
     <!-- Back Cover -->
     <div class="diary-container hidden" id="backCover">
         <div class="back-cover">
             <h2>Our Frozen Journey Never Ends</h2>
            
             <div class="back-cover-stickers">
-                <img class="sticker-img" src="https://www.seekpng.com/png/full/192-1922810_elsa-frozen-png.png" alt="Elsa" onerror="this.src='https://via.placeholder.com/130?text=Elsa'">
-                <img class="sticker-img" src="https://www.seekpng.com/png/full/192-1922809_anna-frozen-png.png" alt="Anna" onerror="this.src='https://via.placeholder.com/130?text=Anna'">
-                <img class="sticker-img" src="https://www.seekpng.com/png/full/192-1922812_olaf-frozen-png.png" alt="Olaf" onerror="this.src='https://via.placeholder.com/130?text=Olaf'">
-                <img class="sticker-img" src="https://www.seekpng.com/png/full/192-1922811_kristoff-frozen-png.png" alt="Kristoff" onerror="this.src='https://via.placeholder.com/130?text=Kristoff'">
-                <img class="sticker-img" src="https://www.seekpng.com/png/full/192-1922814_sven-frozen-png.png" alt="Sven" onerror="this.src='https://via.placeholder.com/130?text=Sven'">
+                <img class="sticker-img" src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="Elsa">
+                <img class="sticker-img" src="https://i.ibb.co/3d9rK7F/anna.png" alt="Anna">
+                <img class="sticker-img" src="https://i.ibb.co/0jR3X5W/olaf.png" alt="Olaf">
+                <img class="sticker-img" src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="Kristoff">
+                <img class="sticker-img" src="https://i.ibb.co/3yvqZ5F/elsa.png" alt="Sven">
             </div>
            
             <p style="font-size: clamp(1.1rem, 3vw, 1.5rem); color: #667eea; margin: 30px 0; line-height: 1.9; font-weight: 600;">
@@ -718,55 +696,57 @@
             <button class="refresh-btn" onclick="refreshPage()">Refresh & Restart</button>
         </div>
     </div>
+
     <script>
-        // Story data
+        // Story Pages Data
         const storyPages = [
             {
                 title: "How We Met",
                 story: "The day our paths crossed felt like destiny. I remember every detail - your smile, your laugh, the way time seemed to stop. That moment changed everything for me.",
                 stickers: [
-                    "https://www.seekpng.com/png/full/192-1922810_elsa-frozen-png.png",
-                    "https://cdn-icons-png.flaticon.com/512/833/833472.png",
-                    "https://www.seekpng.com/png/full/192-1922812_olaf-frozen-png.png"
+                    "https://i.ibb.co/3yvqZ5F/elsa.png",
+                    "https://i.ibb.co/3d9rK7F/anna.png",
+                    "https://i.ibb.co/0jR3X5W/olaf.png"
                 ]
             },
             {
                 title: "Our First Adventure",
                 story: "Remember when we explored together for the first time? Every moment was magical because I was with you. Your excitement made everything more beautiful.",
                 stickers: [
-                    "https://www.seekpng.com/png/full/192-1922809_anna-frozen-png.png",
-                    "https://cdn-icons-png.flaticon.com/512/2590/2590196.png",
-                    "https://www.seekpng.com/png/full/192-1922811_kristoff-frozen-png.png"
+                    "https://i.ibb.co/3d9rK7F/anna.png",
+                    "https://i.ibb.co/3yvqZ5F/elsa.png",
+                    "https://i.ibb.co/0jR3X5W/olaf.png"
                 ]
             },
             {
                 title: "A Special Day",
                 story: "This day will forever be etched in my heart. Your happiness meant the world to me. Seeing you smile made every effort worth it. You deserve all the magic in the world.",
                 stickers: [
-                    "https://www.seekpng.com/png/full/192-1922812_olaf-frozen-png.png",
-                    "https://cdn-icons-png.flaticon.com/512/833/833472.png",
-                    "https://www.seekpng.com/png/full/192-1922810_elsa-frozen-png.png"
+                    "https://i.ibb.co/0jR3X5W/olaf.png",
+                    "https://i.ibb.co/3d9rK7F/anna.png",
+                    "https://i.ibb.co/3yvqZ5F/elsa.png"
                 ]
             },
             {
                 title: "Our Favorite Moment",
                 story: "Of all our memories, this one shines the brightest. Being with you in that moment felt like a dream come true. You make every ordinary day extraordinary.",
                 stickers: [
-                    "https://www.seekpng.com/png/full/192-1922811_kristoff-frozen-png.png",
-                    "https://cdn-icons-png.flaticon.com/512/2590/2590196.png",
-                    "https://www.seekpng.com/png/full/192-1922809_anna-frozen-png.png"
+                    "https://i.ibb.co/3yvqZ5F/elsa.png",
+                    "https://i.ibb.co/0jR3X5W/olaf.png",
+                    "https://i.ibb.co/3d9rK7F/anna.png"
                 ]
             },
             {
                 title: "Forever Together",
                 story: "Every moment with you is a treasure. You're my everything - my partner in every adventure. Like the frozen characters, we're stronger together. Here's to our never-ending story!",
                 stickers: [
-                    "https://www.seekpng.com/png/full/192-1922810_elsa-frozen-png.png",
-                    "https://www.seekpng.com/png/full/192-1922809_anna-frozen-png.png",
-                    "https://cdn-icons-png.flaticon.com/512/833/833472.png"
+                    "https://i.ibb.co/3yvqZ5F/elsa.png",
+                    "https://i.ibb.co/3d9rK7F/anna.png",
+                    "https://i.ibb.co/0jR3X5W/olaf.png"
                 ]
             }
         ];
+
         let currentPage = 0;
         let musicPlaying = false;
 
@@ -796,7 +776,7 @@
         setInterval(createSnowflakes, 4000);
         createSnowflakes();
 
-        // Riddle check
+        // Check riddle
         function checkAnswer() {
             const answer = document.getElementById('riddleAnswer').value.toLowerCase().trim();
             if (answer.includes('you') || answer === 'u' || answer.length > 2) {
@@ -823,7 +803,7 @@
            
             const container = document.getElementById('pageStickers');
             container.innerHTML = page.stickers.map(src =>
-                `<img class="sticker-img" src="${src}" alt="Sticker" onerror="this.src='https://via.placeholder.com/100?text=Sticker'">`
+                `<img class="sticker-img" src="${src}" alt="Sticker">`
             ).join('');
            
             document.getElementById('prevBtn').disabled = pageNum === 0;
