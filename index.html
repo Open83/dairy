@@ -356,7 +356,9 @@
        
         .photo-placeholder {
             width: 100%;
-            height: 320px;
+            height: auto;
+            aspect-ratio: 9/16;
+            max-height: 500px;
             background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
             border-radius: 8px;
             display: flex;
@@ -367,6 +369,14 @@
             text-align: center;
             padding: 20px;
             font-weight: 600;
+            overflow: hidden;
+        }
+        
+        .photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
         }
        
         .story-text {
@@ -564,7 +574,7 @@
             }
            
             .photo-placeholder {
-                height: 280px;
+                max-height: 450px;
             }
            
             .navigation {
@@ -577,7 +587,7 @@
         }
         @media (max-width: 480px) {
             .photo-placeholder {
-                height: 220px;
+                max-height: 380px;
             }
            
             .riddle-box {
@@ -664,8 +674,8 @@
            
             <div class="photo-frame">
                 <div class="photo-placeholder" id="photoPlaceholder">
-                    📸 Add Your Beautiful Photo Here<br>
-                    <small style="font-size: 0.9em; opacity: 0.8;">(Replace with your actual image)</small>
+                    <!-- Replace the src with your actual image URL (720x1280) -->
+                    <img src="YOUR_IMAGE_URL_HERE.jpg" alt="Our Memory" onerror="this.parentElement.innerHTML='📸 Image not found<br><small>Please update the image URL</small>'">
                 </div>
             </div>
            
